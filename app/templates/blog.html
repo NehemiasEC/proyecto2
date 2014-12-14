@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="blog">
+        <article class="articulo">
+            {% for link in enlaces %}
+                <h2><a href="{% url "blog" %}">{{ link.titulo}}</a></h2>
+            {% endfor %}
+        </article>
+    </section>
+    <section class="top">
+        <ul>
+        {% for cat in categorias %}
+            <li class="categoria"><a href="{% url 'categoria' cat.pk %}">{{ cat}}</a></li>
+        {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

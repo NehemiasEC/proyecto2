@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <link rel="icon" href="../static/img/favoricon.ico">
+        <title>Estrategux</title>
+        <link href="../static/css/normalize.css" rel="stylesheet">
+        <link href="../static/css/main.css" rel="stylesheet">
+        <script src="../static/js/jquery-2.1.1.min.js"></script>
+        <script src="../static/js/code.js"></script>
+    </head>
+    <body>
+        <header>
+            <figure>
+                <a href="{% url 'home' %}"><img src="../static/img/logo_estrategux_el_salvador.png" title="logo estrategux el salvador" alt="logo estrategus"></a>
+            </figure>
+             <nav id="Menu">
+            <ul>
+                <li>
+                	<a href="{% url 'desarrollo' %}">Desarrollo web</a>
+                	<ul>
+                        <li><a href="#">Personales</a></li>
+                        <li><a href="#">Corporativas</a></li>
+                        <li><a href="#">Tiendas en linea</a></li>
+                        <li><a href="#">Sistemas Web</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{% url 'estrategia' %}">Estrategia digital</a>
+                    <ul>
+                        <li><a href="#">Empresarial</a></li>
+                        <li><a href="#">Startup</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">Marketing</a>
+                </li>
+                <li>
+                    <a href="{% url 'blog' %}">Blog</a>
+                </li>
+            </ul>
+        </nav>
+        </header>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
